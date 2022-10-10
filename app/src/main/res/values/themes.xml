@@ -1,0 +1,38 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Numbers" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary_40</item>
+        <item name="colorOnPrimary">@color/primary_100</item>
+        <item name="colorPrimaryContainer">@color/primary_90</item>
+        <item name="colorOnPrimaryContainer">@color/primary_10</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondary_40</item>
+        <item name="colorOnSecondary">@color/secondary_100</item>
+        <item name="colorSecondaryContainer">@color/secondary_90</item>
+        <item name="colorOnSecondaryContainer">@color/secondary_10</item>
+        <!-- Tertiary brand color-->
+        <item name="colorTertiary">@color/tertiary_40</item>
+        <item name="colorOnTertiary">@color/tertiary_100</item>
+        <item name="colorTertiaryContainer">@color/tertiary_90</item>
+        <item name="colorOnTertiaryContainer">@color/tertiary_10</item>
+        <!-- Error brand color-->
+        <item name="colorError">@color/error_40</item>
+        <item name="colorOnError">@color/error_100</item>
+        <item name="colorErrorContainer">@color/error_90</item>
+        <item name="colorOnErrorContainer">@color/error_10</item>
+        <!-- Background brand color-->
+        <item name="background">@color/neutral_99</item>
+        <item name="colorOnBackground">@color/neutral_10</item>
+        <item name="colorSurface">@color/neutral_99</item>
+        <item name="colorPrimarySurface">@color/primary_40_surface_8</item>
+        <item name="colorOnSurface">@color/neutral_10</item>
+        <item name="colorSurfaceVariant">@color/neutral_variant_90</item>
+        <item name="colorOnSurfaceVariant">@color/neutral_variant_30</item>
+        <item name="colorOutline">@color/neutral_variant_50</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/primary_40_surface_8</item>
+<!--        <item name="android:statusBarColor">@android:color/transparent</item>-->
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>

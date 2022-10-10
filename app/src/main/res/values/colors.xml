@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="primary_40">#2F6A46</color>
+    <color name="primary_90">#B2F1C3</color>
+    <color name="secondary_40">#546257</color>
+    <color name="secondary_90">#D8E6D8</color>
+    <color name="tertiary_40">#48626A</color>
+    <color name="tertiary_90">#CBE7F0</color>
+    <color name="neutral_99">#FDFCF8</color>
+    <color name="variant_90">#DFE4DD</color>
+    <color name="error_40">#ba1b1b</color>
+    <color name="error_90">#ba1b1b</color>
+    <color name="primary_100">#FFFFFF</color>
+    <color name="primary_10">#00210F</color>
+    <color name="secondary_100">#FFFFFF</color>
+    <color name="secondary_10">#121E16</color>
+    <color name="tertiary_100">#FFFFFF</color>
+    <color name="tertiary_10">#021F26</color>
+    <color name="neutral_10">#1A1C1A</color>
+    <color name="error_100">#FFFFFF</color>
+    <color name="error_10">#410001</color>
+    <color name="neutral_0">#000000</color>
+    <color name="primary">#2F6A46</color>
+    <color name="neutral_20">#2e312d</color>
+    <color name="neutral_95">#f0f1eb</color>
+    <color name="neutral_variant_90">#DFE4DD</color>
+    <color name="neutral_variant_30">#434843</color>
+    <color name="neutral_variant_50">#737873</color>
+    <color name="primary_40_surface_8">#EDF0EA</color>
+    <color name="primary_90_surface_8">#242B25</color>
+
+    <color name="primary_80">#97D4A9</color>
+    <color name="primary_30">#135130</color>
+    <color name="secondary_80">#BCCABD</color>
+    <color name="secondary_30">#3D4A3F</color>
+    <color name="tertiary_80">#AFCBD4</color>
+    <color name="tertiary_30">#314B52</color>
+    <color name="error_80">#ffb4a9</color>
+    <color name="error_30">#930006</color>
+    <color name="primary_20">#00391D</color>
+    <color name="secondary_20">#27332A</color>
+    <color name="tertiary_20">#19343B</color>
+    <color name="neutral_90">#E3E3DF</color>
+    <color name="error_20">#680003</color>
+    <color name="primary_dark">#97D4A9</color>
+    <color name="neutral_variant_80">#C3C8C1</color>
+    <color name="neutral_variant_60">#8D928C</color>
+</resources>
