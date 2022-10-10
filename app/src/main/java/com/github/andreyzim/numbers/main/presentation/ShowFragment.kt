@@ -1,4 +1,4 @@
-package com.github.andreyzim.numbers.details.presentation
+package com.github.andreyzim.numbers.main.presentation
 
 import androidx.fragment.app.Fragment
 

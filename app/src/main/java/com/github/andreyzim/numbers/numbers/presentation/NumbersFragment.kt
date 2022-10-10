@@ -9,8 +9,7 @@ import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
 import com.github.andreyzim.numbers.R
 import com.github.andreyzim.numbers.details.presentation.DetailsFragment
-import com.github.andreyzim.numbers.details.presentation.NavigationStrategy
-import com.github.andreyzim.numbers.details.presentation.ShowFragment
+import com.github.andreyzim.numbers.main.presentation.ShowFragment
 
 class NumbersFragment : Fragment() {
 

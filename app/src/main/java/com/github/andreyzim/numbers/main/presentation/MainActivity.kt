@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.github.andreyzim.numbers.R
-import com.github.andreyzim.numbers.details.presentation.NavigationStrategy
-import com.github.andreyzim.numbers.details.presentation.ShowFragment
 import com.github.andreyzim.numbers.numbers.presentation.NumbersFragment
 
 class MainActivity : AppCompatActivity(), ShowFragment {
