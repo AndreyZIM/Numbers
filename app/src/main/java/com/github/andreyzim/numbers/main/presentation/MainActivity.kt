@@ -7,6 +7,7 @@ import com.github.andreyzim.numbers.R
 import com.github.andreyzim.numbers.numbers.presentation.NumbersFragment
 
 class MainActivity : AppCompatActivity(), ShowFragment {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
