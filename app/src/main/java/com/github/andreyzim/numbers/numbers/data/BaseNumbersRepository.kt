@@ -1,5 +1,7 @@
 package com.github.andreyzim.numbers.numbers.data
 
+import com.github.andreyzim.numbers.numbers.data.cache.NumbersCacheDataSource
+import com.github.andreyzim.numbers.numbers.data.cloud.NumbersCloudDataSource
 import com.github.andreyzim.numbers.numbers.domain.NumberFact
 import com.github.andreyzim.numbers.numbers.domain.NumbersRepository
 

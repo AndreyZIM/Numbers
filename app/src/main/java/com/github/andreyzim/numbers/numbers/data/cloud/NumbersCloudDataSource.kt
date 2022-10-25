@@ -1,4 +1,7 @@
-package com.github.andreyzim.numbers.numbers.data
+package com.github.andreyzim.numbers.numbers.data.cloud
+
+import com.github.andreyzim.numbers.numbers.data.NumberData
+import com.github.andreyzim.numbers.numbers.data.cache.FetchNumber
 
 interface NumbersCloudDataSource: FetchNumber {
     suspend fun randomNumber(): NumberData

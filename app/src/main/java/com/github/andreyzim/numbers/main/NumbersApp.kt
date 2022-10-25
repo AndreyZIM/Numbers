@@ -2,7 +2,7 @@ package com.github.andreyzim.numbers.main
 
 import android.app.Application
 import com.github.andreyzim.numbers.BuildConfig
-import com.github.andreyzim.numbers.numbers.data.CloudModule
+import com.github.andreyzim.numbers.numbers.data.cloud.CloudModule
 
 class NumbersApp : Application() {
 

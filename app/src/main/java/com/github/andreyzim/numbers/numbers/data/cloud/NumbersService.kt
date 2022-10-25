@@ -1,4 +1,4 @@
-package com.github.andreyzim.numbers.numbers.data
+package com.github.andreyzim.numbers.numbers.data.cloud
 
 import retrofit2.Response
 import retrofit2.http.GET

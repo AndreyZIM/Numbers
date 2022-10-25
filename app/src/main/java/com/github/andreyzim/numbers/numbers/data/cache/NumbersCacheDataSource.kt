@@ -1,6 +1,6 @@
-package com.github.andreyzim.numbers.numbers.data
+package com.github.andreyzim.numbers.numbers.data.cache
 
-import com.github.andreyzim.numbers.numbers.presentation.FetchNumbers
+import com.github.andreyzim.numbers.numbers.data.NumberData
 
 interface NumbersCacheDataSource : FetchNumber {
 
