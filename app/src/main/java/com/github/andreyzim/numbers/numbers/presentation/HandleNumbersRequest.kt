@@ -1,5 +1,6 @@
 package com.github.andreyzim.numbers.numbers.presentation
 
+import android.view.View
 import com.github.andreyzim.numbers.numbers.domain.NumbersResult
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
@@ -21,10 +22,10 @@ interface HandleNumbersRequest {
             coroutineScope: CoroutineScope,
             block: suspend () -> NumbersResult
         ) {
-            communication.showProgress(true)
+            communication.showProgress(View.VISIBLE)
             coroutineScope.launch(dispatchers.io()) {
                 val result = block.invoke()
-                communication.showProgress(false)
+                communication.showProgress(View.GONE)
                 result.map(numbersResultMapper)
             }
         }

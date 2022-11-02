@@ -73,7 +73,7 @@ class NumbersViewModelTest : BaseTest() {
         assertEquals(false, communications.progressCalledList[3])
 
         assertEquals(2, communications.stateCalledList.size)
-        assertEquals(UiState.Error("No internet connection"), communications.stateCalledList[1])
+        assertEquals(UiState.ShowError("No internet connection"), communications.stateCalledList[1])
         assertEquals(0, communications.timesShowList)
 
         viewModel.init(isFirstRun = false)
@@ -94,7 +94,7 @@ class NumbersViewModelTest : BaseTest() {
         assertEquals(0, communications.progressCalledList.size)
 
         assertEquals(1, communications.stateCalledList.size)
-        assertEquals(UiState.Error("Entered number is empty"), communications.stateCalledList[0])
+        assertEquals(UiState.ShowError("Entered number is empty"), communications.stateCalledList[0])
 
         assertEquals(0, communications.timesShowList)
     }
