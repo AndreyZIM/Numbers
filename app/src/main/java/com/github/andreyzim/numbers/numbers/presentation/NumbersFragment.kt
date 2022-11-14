@@ -13,17 +13,25 @@ import com.github.andreyzim.numbers.R
 import com.github.andreyzim.numbers.databinding.FragmentNumbersBinding
 import com.github.andreyzim.numbers.details.presentation.DetailsFragment
 import com.github.andreyzim.numbers.main.presentation.ShowFragment
+import com.github.andreyzim.numbers.main.sl.ProvideViewModel
 
 class NumbersFragment : Fragment() {
 
     private var _binding: FragmentNumbersBinding? = null
     private val binding get() = _binding!!
     private var showFragment: ShowFragment = ShowFragment.Empty()
-    private lateinit var viewModel: NumbersViewModel // TODO init viewModel
+    private lateinit var viewModel: NumbersViewModel
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
         showFragment = context as ShowFragment
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        viewModel = (requireActivity() as ProvideViewModel).provideViewModel(
+            NumbersViewModel::class.java, this
+        )
     }
 
     override fun onCreateView(
@@ -43,9 +51,10 @@ class NumbersFragment : Fragment() {
         val inputLayout = binding.textInputLayout
         val inputEditText = binding.editText
         val recyclerView = binding.recyclerView
+        val mapper = DetailUi()
         val adapter = NumbersAdapter(object : ClickListener {
             override fun click(item: NumberUi) {
-                // TODO move to next screen howFragment.show(DetailsFragment.newInstance("some information about the random number hardcoded"))
+                showFragment.show(DetailsFragment.newInstance(item.map(mapper)))
             }
         })
         recyclerView.adapter = adapter
