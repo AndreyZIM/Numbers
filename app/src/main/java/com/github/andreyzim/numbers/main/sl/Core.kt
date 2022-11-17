@@ -13,7 +13,7 @@ interface Core : CloudModule, CacheModule, ManageResources {
 
     class Base(
         context: Context,
-        private val isRelease: Boolean
+        private val provideInstances: ProvideInstances
     ) : Core {
 
         private val manageResources: ManageResources = ManageResources.Base(context)
@@ -23,17 +23,11 @@ interface Core : CloudModule, CacheModule, ManageResources {
         }
 
         private val cloudModule by lazy {
-            if (isRelease)
-                CloudModule.Release()
-            else
-                CloudModule.Debug()
+            provideInstances.provideCloudModule()
         }
 
         private val cacheModule by lazy {
-            if (isRelease)
-                CacheModule.Base(context)
-            else
-                CacheModule.Mock(context)
+            provideInstances.provideCacheModule()
         }
 
         override fun provideDispatchers(): DispatchersList = dispatchersList
