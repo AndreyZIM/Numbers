@@ -49,10 +49,10 @@ class NumbersViewModelTest : BaseTest() {
         viewModel.init(isFirstRun = true)
 
         // 3. Check
-        assertEquals(true, communications.progressCalledList[0])
+        assertEquals(0, communications.progressCalledList[0])
         assertEquals(1, interactor.initCalledList.size)
         assertEquals(2, communications.progressCalledList.size)
-        assertEquals(false, communications.progressCalledList[1])
+        assertEquals(8, communications.progressCalledList[1])
 
         assertEquals(1, communications.stateCalledList.size)
         assertEquals(true, communications.stateCalledList[0] is UiState.Success)
@@ -65,12 +65,12 @@ class NumbersViewModelTest : BaseTest() {
         interactor.changeExpectedResult(NumbersResult.Failure("No internet connection"))
         viewModel.fetchRandomNumbersFact()
 
-        assertEquals(true, communications.progressCalledList[2])
+        assertEquals(0, communications.progressCalledList[2])
 
         assertEquals(1, interactor.fetchAboutRandomNumberCalledList.size)
 
         assertEquals(4, communications.progressCalledList.size)
-        assertEquals(false, communications.progressCalledList[3])
+        assertEquals(8, communications.progressCalledList[3])
 
         assertEquals(2, communications.stateCalledList.size)
         assertEquals(UiState.ShowError("No internet connection"), communications.stateCalledList[1])
@@ -110,13 +110,13 @@ class NumbersViewModelTest : BaseTest() {
 
         viewModel.fetchNumberFact("45")
 
-        assertEquals(true, communications.progressCalledList[0])
+        assertEquals(0, communications.progressCalledList[0])
 
         assertEquals(1, interactor.fetchAboutNumberCalledList.size)
         assertEquals(NumbersResult.Success(listOf(NumberFact("45", "fact about 45"))), interactor.fetchAboutNumberCalledList[0])
 
         assertEquals(2, communications.progressCalledList.size)
-        assertEquals(false, communications.progressCalledList[1])
+        assertEquals(8, communications.progressCalledList[1])
 
         assertEquals(1, communications.stateCalledList.size)
         assertEquals(true, communications.stateCalledList[0] is UiState.Success)
