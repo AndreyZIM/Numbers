@@ -14,6 +14,7 @@ import com.github.andreyzim.numbers.databinding.FragmentNumbersBinding
 import com.github.andreyzim.numbers.details.presentation.DetailsFragment
 import com.github.andreyzim.numbers.main.presentation.ShowFragment
 import com.github.andreyzim.numbers.main.sl.ProvideViewModel
+import com.google.android.material.textfield.TextInputEditText
 
 class NumbersFragment : Fragment() {
 
@@ -21,6 +22,11 @@ class NumbersFragment : Fragment() {
     private val binding get() = _binding!!
     private var showFragment: ShowFragment = ShowFragment.Empty()
     private lateinit var viewModel: NumbersViewModel
+    private lateinit var inputEditText: TextInputEditText
+
+    private val watcher = object : SimpleTextWatcher() {
+        override fun afterTextChanged(s: Editable?) = viewModel.clearError()
+    }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -49,22 +55,14 @@ class NumbersFragment : Fragment() {
         val factButton = binding.getFactButton
         val randomButton = binding.randomFactButton
         val inputLayout = binding.textInputLayout
-        val inputEditText = binding.editText
+        inputEditText = binding.editText
         val recyclerView = binding.recyclerView
         val mapper = DetailUi()
         val adapter = NumbersAdapter(object : ClickListener {
-            override fun click(item: NumberUi) {
+            override fun click(item: NumberUi) =
                 showFragment.show(DetailsFragment.newInstance(item.map(mapper)))
-            }
         })
         recyclerView.adapter = adapter
-
-        inputEditText.addTextChangedListener(object : SimpleTextWatcher() {
-            override fun afterTextChanged(s: Editable?) {
-                super.afterTextChanged(s)
-                viewModel.clearError()
-            }
-        })
 
         factButton.setOnClickListener {
             viewModel.fetchNumberFact(inputEditText.text.toString())
@@ -87,6 +85,16 @@ class NumbersFragment : Fragment() {
         }
 
         viewModel.init(savedInstanceState == null)
+    }
+
+    override fun onResume() {
+        inputEditText.addTextChangedListener(watcher)
+        super.onResume()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        inputEditText.removeTextChangedListener(watcher)
     }
 
     override fun onDetach() {
