@@ -21,7 +21,8 @@ interface NumbersCloudDataSource: FetchNumber {
         }
 
         override suspend fun number(number: String): NumberData {
-            TODO("Not yet implemented")
+            val fact = service.fact(number)
+            return NumberData(number, fact)
         }
 
         companion object {
